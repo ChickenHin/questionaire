@@ -21,3 +21,8 @@
   * import A from '@/components/A.vue',@为自定义路径src
   * vue.use(Router)
   * export default new Router({routes: [{path: '/a', name: 'a', component: A}]})
+
+### localStorage
+* 存储问卷数据
+* localStorage.setItem('Data', JSON.stringify(data));//把数据存到缓存中，data是数组，需要转化为字符串
+* JSON.parse(localStorage.getItem("Data"))//读取缓存中的数据并转化为数组对象
