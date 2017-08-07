@@ -1,21 +1,23 @@
-# questionaire
+# 问卷管理系统
 
-> A Vue.js project
+### 目录
+>我的问卷
+>>新建问卷
+>>查看问卷
+>>编辑问卷
+>>删除问卷
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### vue
+* 组件
+  * 每个组件作为单独的文件（.vue）在components文件夹内
+  * 引用某个组件import A from './A.vue'
+  * 组件间通信
+    * 子组件中:this.$emit('event',data)
+    * 父组件中:<子组件 @event="handle"></子组件> handler(data){} components: {子组件}
+* 路由
+  * 路由配置在src/router/index.js中
+  * import Vue from 'vue'
+  * import Router from 'vue-router'
+  * import A from '@/components/A.vue',@为自定义路径src
+  * vue.use(Router)
+  * export default new Router({routes: [{path: '/a', name: 'a', component: A}]})
